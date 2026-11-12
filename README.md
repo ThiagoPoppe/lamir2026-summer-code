@@ -1,12 +1,15 @@
 # LAMIR 2026 – Summer Code
 
+[![Static Badge](https://img.shields.io/badge/Data%20%F0%9F%92%BE-lightblue)](DATA_LINK) [![Static Badge](https://img.shields.io/badge/Slides%20%F0%9F%93%81-lightgreen)](SLIDES_LINK) [![Static Badge](https://img.shields.io/badge/Interactive%20Notebook%20%F0%9F%93%93-lightgray)](notebooks/interactive.ipynb) [![Static Badge](https://img.shields.io/badge/Implementation%20Notebook%20%F0%9F%93%93-lightgray)](audio_fingerprinting.ipynb) 
+
+
 ## Breaking Shazam: An Introduction to Audio Fingerprinting
 
 An interactive introduction to **Music Information Retrieval (MIR)** through audio fingerprinting. Inspired by the original Shazam algorithm proposed by [Wang (2003)](https://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf), this Summer Code explores how computers identify music recordings from short audio excerpts, how audio fingerprints are constructed, and under which conditions the algorithm can fail.
 
 The activities combine theoretical presentations, hands-on implementations, and interactive experiments, allowing participants to understand, reproduce, and challenge a classic music identification system.
 
----
+<!-- ---
 
 ## 📚 Materials
 
@@ -18,7 +21,7 @@ The activities combine theoretical presentations, hands-on implementations, and 
 
 > **Note:** Presentation slides will be hosted externally (Google Drive). Notebook links will be updated as the materials become available.
 
----
+--- -->
 
 ## 🗓️ Schedule
 
