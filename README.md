@@ -36,9 +36,9 @@ The activities combine theoretical presentations, hands-on implementations, and 
 
 | Time | Activity |
 |:---|:---|
-| 13:30 – 14:00 | **Breaking Shazam!** – An interactive introduction to audio fingerprinting and its limitations through hands-on experiments. |
 | 14:00 – 15:30 | **Understanding Shazam** – A guided implementation of the audio fingerprinting algorithm using Python and Jupyter notebooks. |
-| 15:45 – 16:15 | **Can You Break Shazam?** – Revisiting the interactive notebook to investigate why certain audio transformations affect the algorithm while others do not. |
+| 15:30 – 15:45 | **Coffee Break** |
+| 15:45 – 17:15 | **Breaking Shazam!** – An interactive exploration of audio fingerprinting using the GTZAN dataset, investigating algorithm parameters, identification performance, and robustness to audio transformations. |
 
 *Schedule is tentative and subject to change.*
 
