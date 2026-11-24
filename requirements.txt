@@ -1,0 +1,28 @@
+# Dependencies for the audio fingerprinting notebooks.
+# Works on Google Colab (most of these come preinstalled there) and on local/remote
+# machines. Lower bounds are used instead of exact pins to avoid conflicts with
+# Colab's preinstalled packages. Requires Python >= 3.9.
+#
+# On a local/remote machine, also install a notebook frontend, e.g.:
+#   pip install jupyterlab
+# (not listed here because Colab already provides its own).
+# You can also use Visual Studio Code's Jupyter extension to run notebooks inside the IDE,
+# although some ipywidgets renderings may be incomplete there (e.g., the song selector dropdowns).
+
+# Audio and signal processing
+librosa>=0.10
+numpy
+scipy
+audiomentations>=0.18.0
+
+# Data and plotting
+pandas
+matplotlib
+
+# Notebook interactivity (widgets, display helpers, progress bars)
+ipython
+ipywidgets
+tqdm
+
+# Dataset download
+kagglehub
