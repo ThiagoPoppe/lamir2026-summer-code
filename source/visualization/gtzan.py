@@ -1,32 +1,14 @@
 import pandas as pd
 import ipywidgets as widgets
 import IPython.display as ipd
-import matplotlib.pyplot as plt
 
-from typing import Callable
-from .common import play_song
 from ..fingerprint import load_audio
 
 _SONG_DROPDOWN_PLACEHOLDER = ("Select a song...", None)
 
 
-def plot_top10_artists_per_genre(catalog_df, genre):
-    if genre == 'All':
-        top10_artists = catalog_df['artist'].value_counts().head(10)
-    else:
-        genre_catalog_df = catalog_df[catalog_df.genre == genre]
-        top10_artists = genre_catalog_df['artist'].value_counts().head(10)
-
-    plt.title(f'Top 10 most common artists in the "{genre}" genre')
-    plt.barh(top10_artists.index, top10_artists.values)
-    plt.xlabel('Number of songs')
-    plt.ylabel('Artist')
-    plt.show()
-
-
 def song_selector(
     catalog_df: pd.DataFrame,
-    on_select: Callable[[str], None] = play_song,
     width: str = "400px",
 ) -> widgets.VBox:
     """
@@ -36,9 +18,6 @@ def song_selector(
     ----------
     catalog_df : pd.DataFrame
         Catalog with the columns ``artist``, ``title`` and ``filepath``.
-    on_select : callable, optional (default = play_song)
-        Function called with the filepath whenever a song is selected. Anything
-        it prints or displays appears below the selector.
     width : str, optional (default = "400px")
         CSS width of the widgets.
 
@@ -75,7 +54,10 @@ def song_selector(
         filepath = change["new"]
         if filepath is not None:
             with out:
-                on_select(filepath)
+                print(f'Loading track from {filepath}')
+                wave, sr = load_audio(filepath)
+                print(f'Loaded track with sampling rate = {sr}')
+                ipd.display(ipd.Audio(wave, rate=sr))
 
     artist_box.observe(on_artist_change, names="value")
     song_dropdown.observe(on_song_change, names="value")

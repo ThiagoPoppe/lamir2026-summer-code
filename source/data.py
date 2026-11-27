@@ -7,7 +7,7 @@ import pandas as pd
 _CORRUPTED_FILES = {"jazz.00054.wav"}
 
 
-def download(output_dir: str = './gtzan_dataset') -> tuple[str, str]:
+def gtzan_download(output_dir: str = './gtzan_dataset') -> tuple[str, str]:
     dataset_path = kagglehub.dataset_download(
         handle='andradaolteanu/gtzan-dataset-music-genre-classification',
         output_dir=output_dir
